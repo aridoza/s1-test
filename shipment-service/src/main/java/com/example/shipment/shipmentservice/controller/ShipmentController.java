@@ -11,7 +11,7 @@ public class ShipmentController {
     @Autowired
     ShipmentService shipmentService;
 
-    @GetMapping("/shipment/{trackingNumber}")
+    @GetMapping("/shipment/{trackingnumber}")
     public Shipment getShipment(@PathVariable Long trackingNumber) {
         return shipmentService.getShipment(trackingNumber);
     }
