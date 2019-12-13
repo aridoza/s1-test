@@ -27,11 +27,11 @@ pipeline {
         }
         stage('Coverage') {
             steps {
-                sh 'mvn -f ./shipment-service/pom.xml clean package jacoco:report'
+                sh 'mvn -f shipment-service/pom.xml clean package jacoco:report'
             }
             post {
                 always {
-                    publishCoverage adapters: [jacocoAdapter('target/site/jacoco/jacoco.xml')]
+                    publishCoverage adapters: [jacocoAdapter('shipment-service/target/site/jacoco/jacoco.xml')]
                 }
             }
         }
