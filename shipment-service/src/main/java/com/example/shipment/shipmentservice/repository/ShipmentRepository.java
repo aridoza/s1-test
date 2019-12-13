@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ShipmentRepository extends CrudRepository<Shipment, Long> {
+
+    public Shipment getShipmentByTrackingNumber(Long trackingNumber);
 }

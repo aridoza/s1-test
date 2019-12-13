@@ -44,4 +44,13 @@ public class ShipmentServiceTest {
         assertEquals(shipment.getName(), createdShipment.getName());
         assertEquals(shipment.getTrackingNumber(), createdShipment.getTrackingNumber());
     }
+
+    @Test
+    public void getShipment_Shipment_Success() {
+        when(shipmentRepository.getShipmentByTrackingNumber(any())).thenReturn(shipment);
+
+        Shipment foundShipment = shipmentService.getShipment(shipment.getTrackingNumber());
+
+        assertEquals(shipment.getTrackingNumber(), foundShipment.getTrackingNumber());
+    }
 }
