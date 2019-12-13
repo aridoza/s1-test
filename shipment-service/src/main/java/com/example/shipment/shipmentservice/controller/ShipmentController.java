@@ -12,8 +12,8 @@ public class ShipmentController {
     ShipmentService shipmentService;
 
     @GetMapping("/shipment/{trackingnumber}")
-    public Shipment getShipment(@PathVariable Long trackingNumber) {
-        return shipmentService.getShipment(trackingNumber);
+    public Shipment getShipment(@PathVariable Long trackingnumber) {
+        return shipmentService.getShipment(trackingnumber);
     }
 
     @PostMapping("/shipment/addshipment")
