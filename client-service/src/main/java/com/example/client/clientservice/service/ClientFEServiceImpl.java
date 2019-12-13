@@ -12,8 +12,8 @@ public class ClientFEServiceImpl implements ClientFEService {
     ShipmentClient shipmentClient;
 
     @Override
-    public Shipment getShipment(Long trackingNumber) {
-        return shipmentClient.getShipment(trackingNumber);
+    public Shipment getShipment(Long trackingnumber) {
+        return shipmentClient.getShipment(trackingnumber);
     }
 
     @Override
