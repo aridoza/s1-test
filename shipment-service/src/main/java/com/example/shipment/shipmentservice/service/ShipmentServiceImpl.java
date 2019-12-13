@@ -18,6 +18,6 @@ public class ShipmentServiceImpl implements ShipmentService {
 
     @Override
     public Shipment getShipment(Long trackingNumber) {
-        return null;
+        return shipmentRepository.getShipmentByTrackingNumber(trackingNumber);
     }
 }
